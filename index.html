@@ -49,10 +49,11 @@ html[data-theme="light"]{
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  background:var(--bg-d);color:var(--txt);font-family:var(--d);-webkit-font-smoothing:antialiased;
+  margin:0;background:var(--bg-d);color:var(--txt);font-family:var(--d);-webkit-font-smoothing:antialiased;
   background-image:radial-gradient(circle at 16% 4%,rgba(232,147,72,.10),transparent 46%),
                    radial-gradient(circle at 86% 22%,rgba(127,176,105,.07),transparent 44%);
   background-attachment:fixed;line-height:1.5;overflow-x:hidden}
+h1,h2,h3,h4,p,figure{margin:0}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
@@ -80,7 +81,7 @@ html[data-theme="light"] .phone img{filter:drop-shadow(0 30px 55px rgba(20,40,30
 /* ============================== NAV ============================== */
 header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
   background:color-mix(in srgb,var(--bg-d) 78%,transparent);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;gap:18px;height:72px}
+.nav-in{display:flex;align-items:center;gap:18px;height:64px}
 .wordmark{font-family:var(--d);font-size:24px;font-weight:700;font-variation-settings:"opsz" 96,"wdth" 84;
   letter-spacing:-.03em}
 .wordmark b{color:var(--amb);font-weight:700}
@@ -98,13 +99,13 @@ html[data-theme="light"] .tgl .i-sun{display:block}
 html[data-theme="light"] .tgl .i-moon{display:none}
 
 /* ============================== HERO ============================== */
-.hero{padding:clamp(48px,7vw,96px) 0 clamp(56px,7vw,104px)}
+.hero{padding:clamp(44px,6vw,80px) 0 clamp(44px,6vw,84px)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
-.hero-eyebrow{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.hero-eyebrow{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
 .hero h1{font-family:var(--d);font-weight:700;font-variation-settings:"opsz" 96,"wdth" 86;letter-spacing:-.045em;
   line-height:.94;font-size:clamp(44px,6.6vw,82px);text-wrap:balance}
 .hero h1 em{font-style:normal;color:var(--amb);font-variation-settings:"opsz" 96,"wdth" 100}
-.hero .lede{font-size:clamp(16px,1.5vw,19px);font-weight:300;line-height:1.6;color:var(--t2);max-width:520px;margin:26px 0 32px}
+.hero .lede{font-size:clamp(16px,1.5vw,19px);font-weight:300;line-height:1.6;color:var(--t2);max-width:520px;margin:24px 0 30px}
 .hero .lede b{color:var(--txt);font-weight:500}
 .signup{display:flex;gap:10px;max-width:480px;flex-wrap:wrap}
 .field{flex:1;min-width:200px;height:52px;border:1px solid var(--line);background:var(--s1);border-radius:14px;
@@ -114,17 +115,17 @@ html[data-theme="light"] .tgl .i-moon{display:none}
 .signup-note{display:flex;align-items:center;gap:9px;margin-top:14px;font-family:var(--m);font-size:10.5px;
   letter-spacing:.04em;color:var(--t3)}
 .signup-note svg{width:14px;height:14px;color:var(--lf);flex-shrink:0}
-.signup-ok{display:none;align-items:center;gap:10px;max-width:480px;height:52px;padding:0 18px;border-radius:14px;
+.signup-ok{display:none;align-items:center;gap:10px;max-width:480px;min-height:52px;padding:12px 18px;border-radius:14px;
   border:1px solid rgba(127,176,105,.4);background:rgba(127,176,105,.12);color:var(--lf);
-  font-family:var(--m);font-size:12px;letter-spacing:.04em;font-weight:600}
+  font-family:var(--m);font-size:12px;letter-spacing:.04em;font-weight:600;line-height:1.45}
 .signup-ok svg{width:18px;height:18px;flex-shrink:0}
-.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px}
+.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px}
 .trust span{display:inline-flex;align-items:center;gap:8px;font-family:var(--m);font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--t3);font-weight:600}
 .trust svg{width:14px;height:14px;color:var(--t2)}
 
 /* hero phones */
-.hero-stage{position:relative;display:flex;justify-content:center;align-items:center;min-height:560px}
+.hero-stage{position:relative;display:flex;justify-content:center;align-items:center;min-height:520px}
 .hero-stage::before{content:"";position:absolute;width:62%;height:62%;border-radius:50%;
   background:radial-gradient(circle,rgba(232,147,72,.26),transparent 70%);filter:blur(20px);z-index:0}
 .hero-stage .phone{z-index:2}
@@ -134,37 +135,32 @@ html[data-theme="light"] .tgl .i-moon{display:none}
 .hero-stage .ph-peek img{filter:drop-shadow(0 24px 44px rgba(0,0,0,.4))}
 
 /* ============================== SECTION HEAD ============================== */
-.sec-head{display:flex;align-items:baseline;gap:22px;margin-bottom:44px}
+.sec-head{display:flex;align-items:baseline;gap:22px;margin-bottom:clamp(28px,3.5vw,40px)}
 .sec-head .sct{font-family:var(--d);font-size:clamp(28px,3.6vw,42px);font-weight:600;
   font-variation-settings:"opsz" 96,"wdth" 86;letter-spacing:-.03em;line-height:1}
 .sec-head .rule{flex:1;height:1px;background:var(--line)}
-section.block{padding:clamp(56px,7vw,88px) 0}
+section.block{padding:clamp(44px,5.5vw,68px) 0}
 section.block.line{border-top:1px solid var(--line)}
 
-/* ============================== FEATURES ============================== */
-.feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.feat{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:24px 22px 26px;
-  transition:border-color .2s ease,transform .2s ease}
-.feat:hover{border-color:rgba(232,147,72,.4);transform:translateY(-3px)}
-.feat .ic{width:46px;height:46px;border-radius:13px;background:var(--s2);border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;color:var(--amb);margin-bottom:20px}
-.feat .ic svg{width:23px;height:23px}
-.feat h3{font-family:var(--d);font-size:17px;font-weight:600;font-variation-settings:"wdth" 92;letter-spacing:-.01em;
-  margin-bottom:9px;line-height:1.15}
-.feat p{font-size:13px;line-height:1.5;color:var(--t2);font-weight:300}
-.feat p b{color:var(--txt);font-weight:500}
-
-/* ============================== GALLERY ============================== */
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);justify-items:center}
-.gal-item{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:300px}
-.gal-item .phone{width:clamp(200px,22vw,260px)}
-.gal-cap{margin-top:22px}
-.gal-cap .gt{font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:700}
-.gal-cap .gn{font-family:var(--d);font-size:18px;font-weight:600;font-variation-settings:"wdth" 92;letter-spacing:-.01em;margin-top:9px}
-.gal-cap .gd{font-size:13px;color:var(--t2);font-weight:300;margin-top:7px;line-height:1.5}
+/* ============================== CORE FEATURES (screenshot + copy rows) ============================== */
+.cf{display:flex;flex-direction:column;gap:clamp(36px,5vw,60px)}
+.cf-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4.5vw,56px);align-items:center}
+.cf-row.rev .cf-media{order:2}
+.cf-media{display:flex;justify-content:center}
+.cf-media .phone{width:clamp(180px,19vw,226px)}
+.cf-text{max-width:460px}
+.cf-row.rev .cf-text{margin-left:auto}
+.cf-head{display:flex;align-items:center;gap:13px;margin-bottom:11px}
+.cf-ic{width:46px;height:46px;border-radius:13px;background:var(--s2);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--amb);flex-shrink:0}
+.cf-ic svg{width:23px;height:23px}
+.cf-text h3{font-family:var(--d);font-size:clamp(20px,2.5vw,27px);font-weight:600;
+  font-variation-settings:"opsz" 96,"wdth" 88;letter-spacing:-.02em;line-height:1.05}
+.cf-text p{font-size:14.5px;line-height:1.6;color:var(--t2);font-weight:300;margin-top:4px}
+.cf-text p b{color:var(--txt);font-weight:500}
 
 /* ============================== COMPLIANCE ============================== */
-.comply{background:var(--s1);border:1px solid var(--line);border-radius:28px;padding:clamp(36px,4.5vw,64px);
+.comply{background:var(--s1);border:1px solid var(--line);border-radius:28px;padding:clamp(32px,4vw,56px);
   position:relative;overflow:hidden}
 .comply::after{content:"";position:absolute;right:-10%;top:-30%;width:60%;height:160%;
   background:radial-gradient(circle,rgba(127,176,105,.12),transparent 65%);pointer-events:none}
@@ -182,7 +178,7 @@ section.block.line{border-top:1px solid var(--line)}
 .cpoint p{font-size:12.5px;line-height:1.5;color:var(--t2);font-weight:300}
 
 /* ============================== ENTERPRISES ============================== */
-.ent{display:flex;flex-wrap:wrap;gap:11px;margin-top:36px}
+.ent{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
 .ent .chip{display:inline-flex;align-items:center;gap:10px;font-family:var(--d);font-size:15px;font-weight:600;
   font-variation-settings:"wdth" 92;letter-spacing:-.005em;color:var(--txt);background:var(--s1);
   border:1px solid var(--line);border-radius:100px;padding:11px 18px;transition:border-color .15s ease,color .15s ease}
@@ -190,17 +186,17 @@ section.block.line{border-top:1px solid var(--line)}
 .ent .chip svg{width:17px;height:17px;color:var(--amb)}
 
 /* ============================== CONTACT / FOOTER ============================== */
-.contact{text-align:center;padding:clamp(64px,8vw,108px) 0 clamp(48px,5vw,72px)}
-.contact .eyebrow{margin-bottom:22px}
+.contact{text-align:center;padding:clamp(52px,6.5vw,84px) 0 clamp(60px,6vw,92px)}
+.contact .eyebrow{margin-bottom:20px}
 .contact h2{font-family:var(--d);font-size:clamp(32px,4.6vw,58px);font-weight:600;font-variation-settings:"opsz" 96,"wdth" 86;
   letter-spacing:-.035em;line-height:1;text-wrap:balance}
-.contact p{font-size:16px;font-weight:300;color:var(--t2);max-width:460px;margin:22px auto 34px;line-height:1.6}
+.contact p{font-size:16px;font-weight:300;color:var(--t2);max-width:460px;margin:20px auto 32px;line-height:1.6}
 .mail{display:inline-flex;align-items:center;gap:12px;font-family:var(--m);font-size:clamp(15px,1.8vw,20px);font-weight:600;
   letter-spacing:.02em;color:var(--amb);border:1px solid rgba(232,147,72,.4);background:rgba(232,147,72,.08);
   border-radius:16px;padding:16px 26px;transition:all .15s ease}
 .mail:hover{background:rgba(232,147,72,.14);transform:translateY(-1px)}
 .mail svg{width:20px;height:20px}
-footer{border-top:1px solid var(--line);padding:30px 0}
+footer{border-top:1px solid var(--line);padding:28px 0}
 .foot-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .foot-in .wordmark{font-size:20px}
 .foot-sp{flex:1}
@@ -208,23 +204,24 @@ footer{border-top:1px solid var(--line);padding:30px 0}
 
 /* ============================== RESPONSIVE ============================== */
 @media (max-width:920px){
-  .hero-grid{grid-template-columns:1fr;gap:48px}
-  .hero-stage{min-height:480px;order:2}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-stage{min-height:440px;order:2}
   .hero-copy{order:1}
-  .feat-grid{grid-template-columns:repeat(2,1fr)}
-  .comply-grid{grid-template-columns:1fr;gap:40px}
-  .comply-media{max-width:300px;margin:0 auto}
+  .comply-grid{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:760px){
+  .cf-row{grid-template-columns:1fr;gap:22px}
+  .cf-row .cf-media,.cf-row.rev .cf-media{order:0}
+  .cf-media .phone{width:clamp(180px,52vw,220px)}
+  .cf-text{max-width:none}
+  .cf-row.rev .cf-text{margin-left:0}
 }
 @media (max-width:680px){
   .wrap{padding:0 20px}
   .nav-links{display:none}
-  .gal-grid{grid-template-columns:1fr;gap:48px}
   .cpoints{grid-template-columns:1fr}
   .signup{max-width:none}
   .trust{gap:14px}
-}
-@media (max-width:420px){
-  .feat-grid{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -260,6 +257,11 @@ footer{border-top:1px solid var(--line);padding:30px 0}
 <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c4 5 6 8 6 11a6 6 0 01-12 0c0-3 2-6 6-11z"/></symbol>
 <symbol id="i-jar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3h8M7 6h10M8 6v13a2 2 0 002 2h4a2 2 0 002-2V6"/><path d="M8 12h8"/></symbol>
 <symbol id="i-fish" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 12c2.4-3.3 5.6-5 9.2-5 2.4 1.4 3.9 3.1 4.4 5-.5 1.9-2 3.6-4.4 5-3.6 0-6.8-1.7-9.2-5z"/><path d="M6 12L3 8.5M6 12l-3 3.5"/><circle cx="15.5" cy="10.8" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-bird" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 19c-1.7 0-3-1.3-3-3 0-2.7 2.1-4.8 5-5 .4-2.4 2.2-4 4.5-4 1.7 0 2.8 1 3.3 2.3l2.7.5-1.9 1.5c-.1 4-2.8 7.2-6.6 7.2z"/><path d="M12.4 6.3 11.4 4"/><path d="M6 19h6.5"/><circle cx="14" cy="8.4" r=".55" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-goat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7.5 7.5C5.8 6 5.3 4 5.8 3c1.2 1 2.3 1.2 3.3 1.2M16.5 7.5c1.7-1.5 2.2-3.5 1.7-4.5-1.2 1-2.3 1.2-3.3 1.2"/><path d="M8 8c0-1.6 1.8-2.7 4-2.7s4 1.1 4 2.7c0 1.6-.5 3.4-1.4 4.8-1 1.6-1.6 3.7-1.6 5.7a1 1 0 01-2 0c0-2-.6-4.1-1.6-5.7C8.5 11.4 8 9.6 8 8z"/><path d="M10.6 9.4h.01M13.4 9.4h.01"/></symbol>
+<symbol id="i-flower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="2.7" r="1.35"/><circle cx="15.3" cy="4.7" r="1.35"/><circle cx="15.3" cy="8.4" r="1.35"/><circle cx="8.7" cy="8.4" r="1.35"/><circle cx="8.7" cy="4.7" r="1.35"/><path d="M12 8.2V21"/><path d="M12 15c-1.8 0-3-1-3.6-2.3M12 17.2c1.8 0 3-1 3.6-2.3"/></symbol>
+<symbol id="i-mushroom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11a8 8 0 0116 0c0 .6-.5 1-1 1H5c-.6 0-1-.4-1-1z"/><path d="M9.5 12v5a2.5 2.5 0 005 0v-5"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.2v9.6L12 21l-8-4.2V7.2L12 3z"/><path d="M4 7.2 12 11.4l8-4.2M12 11.4V21"/></symbol>
 </defs></svg>
 
 <!-- ============================== NAV ============================== -->
@@ -289,14 +291,14 @@ footer{border-top:1px solid var(--line);padding:30px 0}
         <span class="eyebrow">The diversified small-farm logbook</span>
       </div>
       <h1>The whole homestead, from&nbsp;<em>Today</em>.</h1>
-      <p class="lede">Steadbook keeps every enterprise on your land — <b>animals, orchards, crops, compost, vines, hops, timber, fish</b> — in one Today-first logbook. Log by voice, see what's due, and keep records that are audit-ready and yours.</p>
+      <p class="lede">Steadbook keeps every enterprise on your land in one Today-first logbook: <b>animals, orchards, crops, compost, vines, hops, timber, fish</b>. Log by voice, see what's due, and keep records that are audit-ready and yours.</p>
 
       <form class="signup" id="signupForm" novalidate>
         <input class="field" id="email" type="email" inputmode="email" placeholder="you@farm.com" aria-label="Email address" required>
         <button class="btn" type="submit"><svg style="width:17px;height:17px"><use href="#i-bell"/></svg>Notify me</button>
       </form>
-      <div class="signup-ok" id="signupOk"><svg><use href="#i-check"/></svg>You're on the list — we'll email you once, at launch.</div>
-      <div class="signup-note"><svg><use href="#i-lock"/></svg>One email when we launch. No spam, no sharing — ever.</div>
+      <div class="signup-ok" id="signupOk"><svg><use href="#i-check"/></svg><span>Your email app is opening &mdash; just hit send and you're on the launch list.</span></div>
+      <div class="signup-note"><svg><use href="#i-lock"/></svg>Opens your own mail app. No accounts, no tracking, no list we hold for you.</div>
 
       <div class="trust">
         <span><svg><use href="#i-phone"/></svg>iPhone &amp; iPad</span>
@@ -312,7 +314,7 @@ footer{border-top:1px solid var(--line);padding:30px 0}
   </div>
 </section>
 
-<!-- ============================== FEATURES ============================== -->
+<!-- ============================== CORE FEATURES (merged: screenshots + copy) ============================== -->
 <section class="block line" id="features">
   <div class="wrap">
     <div class="sec-head">
@@ -320,69 +322,48 @@ footer{border-top:1px solid var(--line);padding:30px 0}
       <h2 class="sct">One app, every patch of dirt.</h2>
       <span class="rule"></span>
     </div>
-    <div class="feat-grid">
-      <div class="feat">
-        <div class="ic"><svg><use href="#i-today"/></svg></div>
-        <h3>Today-first</h3>
-        <p>Every enterprise's tasks, weather and what's overdue on <b>one morning agenda</b> over your property map.</p>
-      </div>
-      <div class="feat">
-        <div class="ic"><svg><use href="#i-grid"/></svg></div>
-        <h3>The Stead</h3>
-        <p>All your enterprises <b>indexed and switchable</b> — grouped by pattern, status or season.</p>
-      </div>
-      <div class="feat">
-        <div class="ic"><svg><use href="#i-mic"/></svg></div>
-        <h3>Voice + AI logging</h3>
-        <p>Hold to talk. Speech is structured <b>on-device</b> into a clean entry — no audio leaves your phone.</p>
-      </div>
-      <div class="feat">
-        <div class="ic"><svg><use href="#i-leaf"/></svg></div>
-        <h3>Every enterprise</h3>
-        <p>Animals, perennials, annuals, propagation, compost, vines, brewing, forestry and <b>aquaculture</b>.</p>
-      </div>
-      <div class="feat">
-        <div class="ic"><svg><use href="#i-shield"/></svg></div>
-        <h3>Compliance built in</h3>
-        <p>BeeWhere, PUR, Prop 12, CDFA — <b>detected from your county</b> and pre-filled from your logs.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="cf">
 
-<!-- ============================== GALLERY ============================== -->
-<section class="block line">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">See it in the hand</span>
-      <h2 class="sct">Drawn for the phone.</h2>
-      <span class="rule"></span>
-    </div>
-    <div class="gal-grid">
-      <div class="gal-item">
-        <div class="phone"><img class="shot" data-shot="onboarding" alt="Steadbook onboarding screen"></div>
-        <div class="gal-cap">
-          <div class="gt">First run</div>
-          <div class="gn">Set up your stead</div>
-          <div class="gd">Compliance detected from your county, restored from your iCloud.</div>
+      <div class="cf-row">
+        <div class="cf-media"><div class="phone"><img class="shot" data-shot="home" alt="Steadbook Today home screen"></div></div>
+        <div class="cf-text">
+          <div class="cf-head"><span class="cf-ic"><svg><use href="#i-today"/></svg></span><h3>Today-first</h3></div>
+          <p>Open the app and the day is already sorted. Every enterprise's tasks, the weather, and anything overdue land on <b>one morning agenda</b>, laid right over your property map.</p>
         </div>
       </div>
-      <div class="gal-item">
-        <div class="phone"><img class="shot" data-shot="voice" alt="Steadbook voice logging screen"></div>
-        <div class="gal-cap">
-          <div class="gt">Quick log · Voice</div>
-          <div class="gn">Just say it</div>
-          <div class="gd">“Collected fourteen eggs from coop north.” Structured on-device, instantly.</div>
+
+      <div class="cf-row rev">
+        <div class="cf-media"><div class="phone"><img class="shot" data-shot="voice" alt="Steadbook voice logging screen"></div></div>
+        <div class="cf-text">
+          <div class="cf-head"><span class="cf-ic"><svg><use href="#i-mic"/></svg></span><h3>Voice + AI logging</h3></div>
+          <p>Hold the button and talk. “Collected fourteen eggs from coop north.” Steadbook turns plain speech into a clean, filed entry <b>on-device</b>. No audio ever leaves your phone.</p>
         </div>
       </div>
-      <div class="gal-item">
-        <div class="phone"><img class="shot" data-shot="compliance" alt="Steadbook compliance screen"></div>
-        <div class="gal-cap">
-          <div class="gt">Comply</div>
-          <div class="gn">Nothing slips</div>
-          <div class="gd">Filings due, windows opening, what's already on track — at a glance.</div>
+
+      <div class="cf-row">
+        <div class="cf-media"><div class="phone"><img class="shot" data-shot="animal" alt="Steadbook enterprise screen — Bees"></div></div>
+        <div class="cf-text">
+          <div class="cf-head"><span class="cf-ic"><svg><use href="#i-leaf"/></svg></span><h3>Every enterprise, one Stead</h3></div>
+          <p>Animals, perennials, annuals, propagation, compost, vines, brewing, forestry and aquaculture — each with screens drawn for how that enterprise <b>actually works</b>, indexed and switchable by pattern, status or season.</p>
         </div>
       </div>
+
+      <div class="cf-row rev">
+        <div class="cf-media"><div class="phone"><img class="shot" data-shot="compliance" alt="Steadbook compliance screen"></div></div>
+        <div class="cf-text">
+          <div class="cf-head"><span class="cf-ic"><svg><use href="#i-shield"/></svg></span><h3>Compliance built in</h3></div>
+          <p>BeeWhere, PUR, Prop 12, CDFA. Steadbook <b>detects what your county requires</b>, pre-fills it from your logs, and surfaces filing windows before they close.</p>
+        </div>
+      </div>
+
+      <div class="cf-row">
+        <div class="cf-media"><div class="phone"><img class="shot" data-shot="onboarding" alt="Steadbook onboarding screen"></div></div>
+        <div class="cf-text">
+          <div class="cf-head"><span class="cf-ic"><svg><use href="#i-grid"/></svg></span><h3>Set up your stead</h3></div>
+          <p>Pick your county and your enterprises and the rest configures itself — compliance and seasons included, <b>restored from your iCloud</b>. You're logging within minutes of opening the app.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -395,13 +376,13 @@ footer{border-top:1px solid var(--line);padding:30px 0}
         <div>
           <span class="eyebrow">Compliance &amp; privacy</span>
           <h2>Records you own. Audit-ready.</h2>
-          <p class="sub">No accounts. No server. No telemetry. Your stead lives in <b>your</b> private database and leaves as cleanly as it came in — soil to label.</p>
+          <p class="sub">No accounts. No server. No telemetry. Your stead lives in <b>your</b> own private database and leaves as cleanly as it came in, soil to label.</p>
         </div>
         <div class="cpoints">
           <div class="cpoint">
             <div class="ic"><svg><use href="#i-cloud"/></svg></div>
             <h4>Yours, in your iCloud</h4>
-            <p>No accounts or servers — records live in your own private database.</p>
+            <p>No accounts or servers. Records live in your own private database.</p>
           </div>
           <div class="cpoint">
             <div class="ic"><svg><use href="#i-note"/></svg></div>
@@ -416,7 +397,7 @@ footer{border-top:1px solid var(--line);padding:30px 0}
           <div class="cpoint">
             <div class="ic"><svg><use href="#i-dl"/></svg></div>
             <h4>Export anytime</h4>
-            <p>Take your full record set with you — open formats, no lock-in.</p>
+            <p>Take your full record set with you in open formats, no lock-in.</p>
           </div>
         </div>
       </div>
@@ -432,15 +413,21 @@ footer{border-top:1px solid var(--line);padding:30px 0}
       <span class="rule"></span>
     </div>
     <div class="ent">
-      <span class="chip"><svg><use href="#i-bee"/></svg>Animal</span>
-      <span class="chip"><svg><use href="#i-berry"/></svg>Perennial</span>
-      <span class="chip"><svg><use href="#i-veg"/></svg>Annual</span>
-      <span class="chip"><svg><use href="#i-seed"/></svg>Propagation</span>
-      <span class="chip"><svg><use href="#i-leaf"/></svg>Composting</span>
-      <span class="chip"><svg><use href="#i-drop"/></svg>Viticulture</span>
-      <span class="chip"><svg><use href="#i-jar"/></svg>Brewing</span>
-      <span class="chip"><svg><use href="#i-tree"/></svg>Forestry</span>
-      <span class="chip"><svg><use href="#i-fish"/></svg>Aquaculture</span>
+      <span class="chip"><svg><use href="#i-bee"/></svg>Bees</span>
+      <span class="chip"><svg><use href="#i-bird"/></svg>Poultry</span>
+      <span class="chip"><svg><use href="#i-goat"/></svg>Goats</span>
+      <span class="chip"><svg><use href="#i-tree"/></svg>Orchard</span>
+      <span class="chip"><svg><use href="#i-berry"/></svg>Berries</span>
+      <span class="chip"><svg><use href="#i-veg"/></svg>Vegetables</span>
+      <span class="chip"><svg><use href="#i-leaf"/></svg>Herbs</span>
+      <span class="chip"><svg><use href="#i-flower"/></svg>Lavender</span>
+      <span class="chip"><svg><use href="#i-flower"/></svg>Cut flowers</span>
+      <span class="chip"><svg><use href="#i-mushroom"/></svg>Mushrooms</span>
+      <span class="chip"><svg><use href="#i-seed"/></svg>Plant starts</span>
+      <span class="chip"><svg><use href="#i-seed"/></svg>Seeds</span>
+      <span class="chip"><svg><use href="#i-leaf"/></svg>Succulents</span>
+      <span class="chip"><svg><use href="#i-jar"/></svg>Food</span>
+      <span class="chip"><svg><use href="#i-box"/></svg>Goods</span>
     </div>
   </div>
 </section>
@@ -480,15 +467,25 @@ footer{border-top:1px solid var(--line);padding:30px 0}
     applyShots();
   });
 
-  /* ---- email capture (mock) ---- */
+  /* ---- email capture -> compose in the visitor's own mail app (no backend) ---- */
   var form=document.getElementById('signupForm');
   var ok=document.getElementById('signupOk');
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var email=document.getElementById('email');
-    if(!email.value || email.value.indexOf('@')<1){
+    var val=(email.value||'').trim();
+    if(!val || val.indexOf('@')<1){
       email.focus(); email.style.borderColor='var(--cor)'; return;
     }
+    var subject='Notify me when Steadbook launches';
+    var body='Hi Steadbook team,\n\n'
+            +'Please add me to the launch list — I’d like to know when the app is available.\n\n'
+            +'My email: '+val+'\n\n'
+            +'Thanks!';
+    var href='mailto:developer@steadbook.app'
+            +'?subject='+encodeURIComponent(subject)
+            +'&body='+encodeURIComponent(body);
+    window.location.href=href;
     form.style.display='none';
     ok.style.display='flex';
   });
